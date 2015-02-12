@@ -1,0 +1,44 @@
+
+/* TABS */
+#breadcrumb {
+	padding: 5px 5px 0;
+}
+#breadcrumb .nav {
+	padding-left: 0;
+  	margin-bottom: 0;
+  	border-bottom: 1px solid #ddd;
+  	list-style: none;
+}
+#breadcrumb .nav > li {
+	float: left;
+	display: block;
+  	margin-bottom: -1px;
+  	position: relative;
+}
+#breadcrumb .nav > li > a {
+	position: relative;
+	display: block;
+	padding: 6px 15px;
+	margin-right: 2px;
+	color: #555;
+	line-height: 1.428571429;
+	background-color: rgba(235, 235, 235, 0.5);
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+    border-radius: 4px 4px 0 0;
+}
+#breadcrumb .nav > li > a:hover {
+	background-color: rgba(235, 235, 235, 0.7);
+	border-bottom-color: #555;
+	cursor: pointer;
+}
+#breadcrumb .nav > li > a.active {
+	background-color: rgba(235, 235, 235, 1);
+	cursor: default;
+}
+#breadcrumb .nav > li > a.active:hover {
+	background-color: rgba(235, 235, 235, 1);
+	cursor: default;
+	border-bottom-color: transparent;
+}
+/* FIM TABS */

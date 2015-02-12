@@ -411,7 +411,7 @@ function DrawKnob(elem){
 		},
 		release : function (value) {
 			//console.log(this.$.attr('value'));
-			console.log("release : " + value);
+			//console.log("release : " + value);
 		},
 		cancel : function () {
 			console.log("cancel : ", this);
@@ -2303,7 +2303,7 @@ $(document).ready(function () {
 	if (ajax_url.length < 1) {
 		ajax_url = 'ajax/dashboard.html';
 	}
-	LoadAjaxContent(ajax_url);
+	//LoadAjaxContent(ajax_url);
 	$('.main-menu').on('click', 'a', function (e) {
 		var parents = $(this).parents('li');
 		var li = $(this).closest('li.dropdown');
@@ -2332,7 +2332,7 @@ $(document).ready(function () {
 			$(this).parents("ul.dropdown-menu").find('a').removeClass('active');
 			$(this).addClass('active')
 		}
-		if ($(this).hasClass('ajax-link')) {
+		/*if ($(this).hasClass('ajax-link')) {
 			e.preventDefault();
 			if ($(this).hasClass('add-full')) {
 				$('#content').addClass('full-content');
@@ -2342,8 +2342,8 @@ $(document).ready(function () {
 			}
 			var url = $(this).attr('href');
 			window.location.hash = url;
-			LoadAjaxContent(url);
-		}
+			//LoadAjaxContent(url);
+		}*/
 		if ($(this).attr('href') == '#') {
 			e.preventDefault();
 		}
@@ -2428,5 +2428,3 @@ $(document).ready(function () {
 		OpenModalBox(header, form, button);
 	});
 });
-
-
