@@ -2,57 +2,54 @@
 // somente nos 3 primeiros como teste, porém no 'main' é necessário que o 'resolve' esteja declarado
 main.config(['$routeProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.
-        when('/home', {
-            templateUrl: 'ajax/dashboard.html',
+        when('/delivery', {
+            templateUrl: 'views/delivery.html',
             controller: 'DashboardController',
             resolve: {
                 alias: function( $q, $timeout ) {
                     return {
                         getNome: function() {
-                            return 'Dashboard';
+                            return 'Delivery';
                         },
                         getId: function() {
-                            return 'dashboard';
+                            return 'delivery';
                         }
                     }
                   }
             }
         }).
-        when('/charts_xcharts', {
-            templateUrl: 'ajax/charts_xcharts.html',
+        when('/clientes', {
+            templateUrl: 'views/clientes.html',
             controller: 'DashboardController',
             resolve: {
                 alias: function() {
                     return {
                         getNome: function() {
-                            return 'Chart xChart';
+                            return 'Clientes';
+                            
                         },
                         getId: function() {
-                            return 'chart_xcharts';
+                            return 'clientes';
                         }
                     }
                 }
             }
         }).
-        when('/charts_flot', {
-            templateUrl: 'ajax/charts_flot.html',
+        when('/inicial', {
+            templateUrl: 'views/inicial.html',
             controller: 'DashboardController',
             resolve: {
                 alias: function() {
                     return {
                         getNome: function() {
-                            return 'Chart Flot';
+                            return 'Inicial';
                         },
                         getId: function() {
-                            return 'chart_flot';
+                            return 'inicial';
                         }
                     }
                 }
             }
-        }).
-        when('/charts_google', {
-            templateUrl: 'ajax/charts_google.html',
-            controller: 'DashboardController'
         }).
         when('/charts_morris', {
             templateUrl: 'ajax/charts_morris.html',
@@ -64,7 +61,7 @@ main.config(['$routeProvider', function ($routeProvider, $locationProvider) {
         }).
         otherwise(
         {
-            redirectTo: '/home'
+            redirectTo: 'inicial'
         });
 }]);
 
